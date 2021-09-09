@@ -1,0 +1,16 @@
+pip
+fastapi
+pydantic
+Jinja2
+pathlib
+python-multipart
+python-jose
+passlib
+starlette
+deta
+bcrypt
+pydantic[email]
+hurry.filesize
+aiofiles
+shortuuid
+uvicorn
