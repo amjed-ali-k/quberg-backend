@@ -1,7 +1,7 @@
 import fastapi
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.staticfiles import StaticFiles
-from api import auth
+from api import auth, routes
 import uvicorn
 from views import home
 from config import settings
@@ -31,6 +31,7 @@ def configure_routing():
     app.mount('/static', StaticFiles(directory='static'), name='static')
     app.include_router(home.router)
     app.include_router(auth.router)
+    app.include_router(routes.r)
 
 
 if __name__ == '__main__':
