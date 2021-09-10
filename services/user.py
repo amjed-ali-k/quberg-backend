@@ -8,7 +8,7 @@ from jose import jwt, JWTError
 from passlib.context import CryptContext
 from starlette import status
 
-from models.user import UserInDB, User, UserCreate, UserActionsHistory, AccountDetails, UserEdit
+from models.user import UserInDB, User, UserCreate, AccountDetails, UserEdit
 from services.db.userDB import get_user_from_username_db, create_new_user_to_db, update_user_to_db, \
     get_user_from_id, update_password_to_db
 from config import settings

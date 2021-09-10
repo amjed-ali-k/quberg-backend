@@ -10,4 +10,4 @@ class CourseIn(BaseModel):
 
 class CourseDB(CourseIn):
     key: str
-    time: int
+    time: str

@@ -6,7 +6,7 @@ from config import settings
 from models.user import User, UserInDB
 
 # configure your Deta project
-deta = Deta(settings.DETA_BASE_KEY if 'DETA_BASE_KEY' in settings else None)
+deta = Deta(settings.DETA_BASE_KEY)
 users_db = deta.Base('users')
 
 
