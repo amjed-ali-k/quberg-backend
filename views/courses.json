@@ -1,203 +1,141 @@
-[
-  {
-    "name": "Advanced Forex Course",
-    "id": 1,
-    "count": 2,
-    "button": "See more",
-    "link": "/files/whatWeOffer.pdf",
-    "classes": [
-      {
+
+[          {
         "id": "c29b6abd-507c-459b-a2cc-9e86da3a5fd4",
         "title": "Online Course",
         "date": "12 Months",
         "amount": "R5000",
-        "button": true
+        "type": "Online Course"
       },
       {
         "id": "d08d2537-64e5-416e-88e1-6253c4b3c0e3",
         "title": "Online Course",
         "date": "6 Months",
         "amount": "R3500",
-        "button": true
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "type": "column",
-    "link": "/files/whatWeOffer.pdf",
-    "title": {
-      "1": "Forex Bootcamp",
-      "2": "Crypto Bootcamp"
-    },
-    "content": {
-      "1": [
-        {
-          "icon": "calendar",
-          "text": "2 October"
-        },
-        {
-          "icon": "calendar",
-          "text": "12 October"
-        }
-      ],
-      "2": [
-        {
-          "icon": "calendar",
-          "text": "5 October"
-        },
-        {
-          "icon": "calendar",
-          "text": "10 October"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Main Courses",
-    "id": 3,
-    "count": 2,
-    "classes": [
-      {
+        "type": "Online Course"
+      },  {
         "id": "57d5dc4c-d475-49ad-b663-be3329990ddb",
         "title": "Forex/Crypto",
         "date": "6 Months",
         "amount": "R4500",
-        "button": true
-      },
+        "type": "Main Course"
+},
       {
         "id": "e365c1d3-6042-440a-bd72-7ae3c06f6868",
         "title": "Forex/Crypto",
         "date": "12 Months",
         "amount": "R6000",
-        "button": true
-      }
-    ]
-  },
-  {
-    "name": "Private Courses",
-    "id": 4,
-    "count": 2,
-    "classes": [
-      {
+        "type": "Main Course"
+      },{
         "id": "03e50cf5-7aff-4012-8dc5-67d92690955a",
         "title": "Private Forex",
-        "button": true,
+        "type": "Private Course",
         "amount": "R6000"
       },
       {
         "id": "c03f41cc-0e86-42fb-bb49-b9f2c031ab62",
         "title": "Private Forex + Crypto",
-        "button": true,
+        "type": "Private Course",
         "amount": "R8000"
-      }
-    ]
-  },
-  {
-    "name": "Short Courses",
-    "id": 5,
-    "count": 20,
-    "classes": [
-      {
+      },
+   {
         "id": "028b38a9-1edd-4bb5-baf0-6dbdefcba0e1",
         "title": "Indices",
-        "button": true
+        "type": "Short Course"
+
       },
       {
         "id": "e4762bc1-32cc-4235-a54c-7dd4973981ff",
         "title": "Forex Theory",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "b7ec84ee-bddb-4880-94a8-ce8e3363c198",
         "title": "Supply + Demand",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "362f2d33-e490-4975-97b9-83b44a31d9b4",
         "title": "FIB",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "480b66c8-42f0-4e78-a26f-925103b64dab",
         "title": "TrendLines",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "e5ded69d-3a36-4851-b8da-4adc85f315a6",
         "title": "Market & Candlestick pattern",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "90e5a589-9edf-4108-9b12-f2337588a8d0",
         "title": "Using MetaTrader and Trading View",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "78322721-df15-46f9-babb-2fd2957b4a61",
         "title": "Market trends",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "c7ad63fc-7bed-4413-9214-3a7246ca4d17",
         "title": "Support + Resistance",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "a00b9f35-b266-43ed-9503-84074b461055",
-        "title": "Market Correlation",
-        "button": true
+        "title": "Market Corelation",
+        "type": "Short Course"
       },
       {
         "id": "e5a68b98-c0ae-45c8-814c-687bfbfaafba",
         "title": "Timeframe + Pairs",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "b82e76aa-f932-44eb-a6d5-0d6d8005e3dd",
         "title": "Money management + Risk management",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "bb5a7b3a-71c1-46a6-bac4-f08af0cea0d5",
         "title": "Trading Plan",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "1beac91c-8fff-4a45-9591-675fcc94884b",
-        "title": "Fundamental",
-        "button": true
+        "title": "Fundemental",
+        "type": "Short Course"
       },
       {
         "id": "646d2194-e4f8-43fa-b043-d97491cbfebe",
-        "title": "Crypto platforms",
-        "button": true
+        "title": "Crypro platforms",
+        "type": "Short Course"
       },
       {
         "id": "ca427dcb-604b-4d75-ad86-cfe313063609",
         "title": "Building a portfolio",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "a25084ca-343e-4f52-9cbb-462e47af991d",
         "title": "Our Top Coins",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "298ad27c-83c0-4e64-b636-cc05c1b80cac",
         "title": "Predicting Crypto",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "02c7912b-8aec-42e7-ae3d-e6983e318c15",
         "title": "Long Term vs Short Term investments",
-        "button": true
+        "type": "Short Course"
       },
       {
         "id": "59db77ea-b7fb-4d80-ba02-67eb396dd0ab",
         "title": "Scaling entries and taking profits",
-        "button": true
+        "type": "Short Course"
       }
-    ]
-  }
 ]

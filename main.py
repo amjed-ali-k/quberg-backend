@@ -6,7 +6,7 @@ import uvicorn
 from views import home
 from config import settings
 
-app = fastapi.FastAPI(title="BoilerPlate - Amjed Ali",
+app = fastapi.FastAPI(title="Quberg Backend",
                       description="This is a very fancy project, with auto docs for the API and everything",
                       version="2.5.0", )
 

@@ -1,9 +1,8 @@
-from services.course import store_course_registration
+from services.course import store_course_registration, get_upcoming_classes, get_course
 from models.course import CourseDB, CourseIn
 from fastapi import HTTPException, APIRouter
 from starlette import status
-import aiofiles, json, os
-
+from services.email import send_mail
 r = APIRouter()
 tag = "Courses"
 
@@ -16,11 +15,11 @@ async def register_course(form: CourseIn):
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail="An error occurred",
         )
+    course = await get_course(form.id)
+    send_mail(course=f'{course["title"]} in {course["type"]}', **form.dict())
     return data
 
 
 @r.get("/upcoming-classes", tags=[tag])
 async def upcoming_classes_list():
-    async with aiofiles.open(os.getcwd() + '/views/' + 'upcomingClasses.json', mode='r') as f:
-        sensors = json.loads(await f.read())
-    return sensors
+    return await get_upcoming_classes()
