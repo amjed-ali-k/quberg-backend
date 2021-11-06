@@ -4,12 +4,14 @@ import os
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
+from services.db.configDB import get_config_from_db
 
-def send_mail(fullname, phonenumber, course, email, **kwargs):
+
+async def send_mail(fullname, phonenumber, course, email, **kwargs):
     body = f'<strong>{fullname} Booked for {course}!. </strong><br /> Email: {email}<br /> Contact Number: {phonenumber}<br />Full Name: {fullname}<br />Course: {course}'
     message = Mail(
         from_email='contact@fdg-capital.com',
-        to_emails='katesinclair91@gmail.com',
+        to_emails= await get_config_from_db('admin_email'),
         subject=f'{fullname} Booked for {course}!',
         html_content=body)
     try:
