@@ -16,7 +16,7 @@ async def register_course(form: CourseIn):
             detail="An error occurred",
         )
     course = await get_course(form.id)
-    send_mail(course=f'{course["title"]} in {course["type"]}', **form.dict())
+    await send_mail(course=f'{course["title"]} in {course["type"]}', **form.dict())
     return data
 
 
