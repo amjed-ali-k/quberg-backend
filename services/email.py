@@ -9,9 +9,10 @@ from services.db.configDB import get_config_from_db
 
 async def send_mail(fullname, phonenumber, course, email, **kwargs):
     body = f'<strong>{fullname} Booked for {course}!. </strong><br /> Email: {email}<br /> Contact Number: {phonenumber}<br />Full Name: {fullname}<br />Course: {course}'
+    to_email = await get_config_from_db('admin_email')
     message = Mail(
         from_email='contact@fdg-capital.com',
-        to_emails= await get_config_from_db('admin_email'),
+        to_emails= to_email,
         subject=f'{fullname} Booked for {course}!',
         html_content=body)
     try:
