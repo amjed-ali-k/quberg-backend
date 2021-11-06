@@ -3,7 +3,7 @@
 import os
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
-
+from decouple import config
 from services.db.configDB import get_config_from_db
 
 
@@ -16,7 +16,7 @@ async def send_mail(fullname, phonenumber, course, email, **kwargs):
         subject=f'{fullname} Booked for {course}!',
         html_content=body)
     try:
-        sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+        sg = SendGridAPIClient(config('SENDGRID_API_KEY'))
         response = sg.send(message)
         print(response.status_code)
         print(response.body)

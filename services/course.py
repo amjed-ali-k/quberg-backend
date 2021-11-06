@@ -14,7 +14,7 @@ async def store_course_registration(course: CourseIn) -> Optional[CourseDB]:
 
 
 async def get_course(uid: str):
-    return get_course_by_id(uid)
+    return await get_course_by_id(uid)
 
 
 async def get_upcoming_classes():
