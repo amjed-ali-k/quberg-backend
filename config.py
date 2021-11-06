@@ -5,7 +5,7 @@ import secrets
 from typing import Any, Dict, List, Optional, Union
 from functools import lru_cache
 from pydantic import AnyHttpUrl, BaseSettings, HttpUrl, validator
-
+from decouple import config
 
 class Settings(BaseSettings):
     SECRET_KEY: str = secrets.token_urlsafe(32)
@@ -14,13 +14,8 @@ class Settings(BaseSettings):
     BACKEND_CORS_ORIGINS: List = ["*",
                                   "http://localhost:3000",
                                   "http://127.0.0.1:3000"]
-    DETA_BASE_KEY: Optional[str]
+    DETA_BASE_KEY: Optional[str] = config("DETA_BASE_KEY", default=None)
 
-    SMTP_TLS: bool = True
-    SMTP_PORT: Optional[int] = None
-    SMTP_HOST: Optional[str] = None
-    SMTP_USER: Optional[str] = None
-    SMTP_PASSWORD: Optional[str] = None
     EMAILS_FROM_EMAIL: Optional[str] = None
     EMAILS_FROM_NAME: Optional[str] = None
     EMAIL_RESET_TOKEN_EXPIRE_HOURS: int = 48
