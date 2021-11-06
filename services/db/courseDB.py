@@ -1,5 +1,5 @@
 
-from models.course import CourseDB, UpcomingClassDB
+from models.course import CourseDB, IndividualCourses
 from deta import Deta
 from config import settings
 from typing import Optional
@@ -18,13 +18,14 @@ async def create_new_registration_in_db(course: CourseDB) -> Optional[CourseDB]:
         return None
 
 
-async def get_course_by_id(course_id: str) -> Optional[UpcomingClassDB]:
+async def get_course_by_id(course_id: str) -> Optional[IndividualCourses]:
     try:
         course = courses_db.get(course_id)
-        return UpcomingClassDB(**course)
+        return IndividualCourses(**course)
     except:
         return None
 
 async def get_all_courses() -> list:
     courses = courses_db.fetch()
-    return [UpcomingClassDB(**course) for course in courses.items]
+    return [IndividualCourses(**course) for course in courses.items]
+

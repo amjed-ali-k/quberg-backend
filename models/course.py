@@ -14,7 +14,7 @@ class CourseDB(CourseIn):
     time: str
 
 
-class UpcomingClassDB(BaseModel):
+class IndividualCourses(BaseModel):
     id: str
     title: str
     date: Optional[str]

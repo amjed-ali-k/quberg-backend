@@ -1,4 +1,4 @@
-from services.db.courseDB import create_new_registration_in_db, get_all_courses, get_course_by_id
+from services.db.courseDB import create_new_registration_in_db, get_course_by_id
 from models.course import CourseDB, CourseIn
 import uuid
 import datetime
@@ -14,8 +14,10 @@ async def store_course_registration(course: CourseIn) -> Optional[CourseDB]:
 
 
 async def get_course(uid: str):
-    return await get_course_by_id(uid)
+    return get_course_by_id(uid)
 
 
 async def get_upcoming_classes():
-    return await get_all_courses()
+    async with aiofiles.open(os.getcwd() + '/views/' + 'upcomingClasses.json', mode='r') as f:
+        classes = json.loads(await f.read())
+    return classes
