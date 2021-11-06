@@ -18,8 +18,8 @@ async def send_mail(fullname, phonenumber, course, email, **kwargs):
     try:
         sg = SendGridAPIClient(config('SENDGRID_API_KEY'))
         response = sg.send(message)
-        print(response.status_code)
-        print(response.body)
-        print(response.headers)
-    except Exception as e:
+        # print(response.status_code)
+        # print(response.body)
+        # print(response.headers)
+    except Exception as e:  
         print(e)
