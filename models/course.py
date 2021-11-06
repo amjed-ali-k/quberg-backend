@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel
 
 
@@ -11,3 +12,11 @@ class CourseIn(BaseModel):
 class CourseDB(CourseIn):
     key: str
     time: str
+
+
+class UpcomingClassDB(BaseModel):
+    id: str
+    title: str
+    date: Optional[str]
+    amount: Optional[str]
+    type: str
