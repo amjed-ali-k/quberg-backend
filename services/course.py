@@ -21,3 +21,5 @@ async def get_upcoming_classes():
     async with aiofiles.open(os.getcwd() + '/views/' + 'upcomingClasses.json', mode='r') as f:
         classes = json.loads(await f.read())
     return classes
+
+

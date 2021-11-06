@@ -2,7 +2,7 @@
 from models.course import CourseDB, IndividualCourses
 from deta import Deta
 from config import settings
-from typing import Optional
+from typing import List, Optional
 
 
 deta = Deta(settings.DETA_BASE_KEY)  # configure your Deta project
@@ -29,3 +29,7 @@ async def get_all_courses() -> list:
     courses = courses_db.fetch()
     return [IndividualCourses(**course) for course in courses.items]
 
+
+async def get_all_registrations() -> List[CourseDB]:
+    registrations = registration_db.fetch()
+    return [CourseDB(**registration) for registration in registrations.items]
